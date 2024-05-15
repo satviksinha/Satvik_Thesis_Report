@@ -1,0 +1,35 @@
+% Chapter Template
+
+\chapter{Conclusion} % Main chapter title
+
+\label{Chapter 5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter 5. \emph{Conclusion}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+%----------------------------------------------------------------------------------------
+
+%\section{Summary}
+
+% future. not just one measurement after an other
+% desigining the systems that can run on programmable switches. deployable across different vantage points. and do differential analysis and verifiability.
+
+% packet brokering. it is one idea in the overall genenral system design that could enable this kind of continuous real time monitoring and metric collecting sytem in the dataplane.
+
+We have built and deployed a system that is able to monitor live traffic at the network edge, that can handle traffic from multiple 10 Gb/s links. The system can perform anonymization of the traffic at line rate using a P4 programmable switch. Using our system for packet capture, we measured important metrics in the network such as link utilization, packet loss, RTT, asymmetry and other flow meta-data. These measurements can  help us better understand modern network characteristics. We correlate three of the metrics i.e. link utilization, packet losses and RTT to infer congestion events in the network. These measurements also help us in designing new algorithms for the future.
+
+%----------------------------------------------------------------------------------------
+
+\section{Future Work}
+
+\subsection{Extend measurements to the data plane}
+
+We can extend our methodology to directly make measurements in the data plane itself using a P4 program. Our current methodology involves offline analysis of captured data on our server. Taking measurements on the switch itself will provide us with real-time metrics and will be helpful for us in timely identifying any problems with the network. For example, we can immediately notify the network operators if we see considerable losses in the network and provide them data to better troubleshoot the problem.
+
+\subsection{Pinpoint the location of congestion events}
+
+We current have evidence that there are congestion events at the edge. What we have not yet been able to do is to pinpoint the location of the congestion event. Locating the place of congestion requires further in-depth analysis of different metrics.
+
+\subsection{Further categorize internet side losses}
+
+We can further try to classify internet-side losses. The losses can either happen due to link corruption or link congestion. Packet loss due to link corruption is a major problem in large warehouse-scale data centers. Hence categorizing the internet side losses will provide us with new insights into the kind of losses happening on the internet.
+%----------------------------------------------------------------------------------------
